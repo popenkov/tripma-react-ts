@@ -1,18 +1,19 @@
 import classNames from 'classnames';
 import { AppLink, AppLinkTheme } from '@/shared//ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
-import cls from './Navbar.module.scss';
+import cls from './Header.module.scss';
 
-interface NavbarProps {
+interface HeaderProps {
   className?: string;
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
+export const Header = ({ className }: HeaderProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className={classNames(cls.Navbar, {}, [className])}>
+    <nav className={classNames(cls.Header, {}, [className])}>
+      heaser
       <div className={cls.links}>/</div>
-    </div>
+    </nav>
   );
 };

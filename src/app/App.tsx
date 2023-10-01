@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import './styles/index.scss';
 import classNames from 'classnames';
-import { Navbar } from '@/widgets/Navbar';
+import { Header } from '@/widgets/Header';
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider';
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
-        <Navbar />
+        <Header />
         <div className="content-page">
           <AppRouter />
         </div>

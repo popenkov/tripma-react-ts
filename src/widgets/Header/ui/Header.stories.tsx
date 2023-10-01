@@ -1,23 +1,22 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { ThemeDecorator } from '@/shared//config/storybook/ThemeDecorator/ThemeDecorator';
-import AboutPage from './AboutPage';
 import { Theme } from '@/app/providers/ThemeProvider';
+import { Header } from './Header';
 
 export default {
-  title: 'pages/AboutPage',
-  component: AboutPage,
+  title: 'widget/Header',
+  component: Header,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof AboutPage>;
+} as ComponentMeta<typeof Header>;
 
-const Template: ComponentStory<typeof AboutPage> = (args) => (
-  <AboutPage {...args} />
-);
+const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
 
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Light = Template.bind({});
+Light.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};

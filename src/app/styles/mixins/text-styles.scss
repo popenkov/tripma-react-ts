@@ -1,0 +1,55 @@
+@import 'fluid';
+
+@mixin header-h3 {
+  font-family: 'Nunito Sans', sans-serif;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin header-h4 {
+  font-family: 'Nunito Sans', sans-serif;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin body-default {
+  font-family: 'Nunito Sans', sans-serif;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin body-large {
+  font-family: 'Nunito Sans', sans-serif;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin body-extra-large {
+  font-family: 'Nunito Sans', sans-serif;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin footer-header {
+  font-family: 'Nunito Sans', sans-serif;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

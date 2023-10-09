@@ -1,8 +1,8 @@
-:root {
+.app.light {
   --bg-color: #fff;
   --inverted-bg-color: #27273f;
-  --primary-color: #6E7491
-  --secondary-color: ##6E7491;
-  --inverted-primary-color: #FAFAFA;
-  --inverted-secondary-color: #FAFAFA;
+  --primary-color: #6e7491; //цвет заголовков, ссылок, то есть с акцентом
+  --secondary-color: ##6e7491; //цвет основного текста
+  --inverted-primary-color: #fafafa;
+  --inverted-secondary-color: #fafafa;
 }

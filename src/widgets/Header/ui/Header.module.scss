@@ -1,16 +1,15 @@
-.Navbar {
+.Header {
   width: 100%;
   height: var(--navbar-height);
-  background: var(--inverted-bg-color);
+  background-color: transparent;
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 8px 24px;
 }
 
-.links {
-  margin-left: auto;
-}
-
-.mainLink {
-  margin-right: 15px;
+.switchers {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 30px;
 }

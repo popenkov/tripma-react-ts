@@ -1,15 +1,35 @@
 .AppLink {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .primary {
-    color: var(--primary-color);
+  color: var(--primary-color);
+
+  &.active {
+    color: var(--purple-blue);
+  }
+
+  @media screen and (hover: hover) {
+    &:hover {
+      color: var(--purple-dark);
+    }
+  }
 }
 
 .secondary {
-    color: var(--inverted-primary-color);
+  color: var(--inverted-primary-color);
 }
 
-.red {
-    color: red;
+.filled {
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: var(--purple-blue);
+
+  color: var(--inverted-primary-color);
+
+  @media screen and (hover: hover) {
+    &:hover {
+      background-color: var(--purple-dark);
+    }
+  }
 }

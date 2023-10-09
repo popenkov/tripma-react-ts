@@ -1,16 +1,15 @@
+@import '../../../../../src/app/styles/mixins/text-styles.scss';
+
 .Navbar {
-    width: 100%;
-    height: var(--navbar-height);
-    background: var(--inverted-bg-color);
-    display: flex;
-    align-items: center;
-    padding: 20px;
+  margin-left: auto;
 }
 
 .links {
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.mainLink {
-    margin-right: 15px;
+.navLink {
+  @include body-default;
 }

@@ -1,0 +1,20 @@
+.HeroBanner {
+  min-height: calc(100vh - var(--navbar-height));
+  background-image: url(../../../shared/assets/images/content/world-map.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title {
+  color: #000;
+  text-align: center;
+  font-family: Nunito Sans;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 800;
+
+  background-image: url(../../../shared/assets/images/header-bg.png);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

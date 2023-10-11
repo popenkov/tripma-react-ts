@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { Header } from '@/widgets/Header';
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider';
+import { Footer } from '@/widgets/Footer/ui/Footer';
 
 function App() {
   const { theme } = useTheme();
@@ -15,6 +16,7 @@ function App() {
         <div className="content-page">
           <AppRouter />
         </div>
+        <Footer />
       </Suspense>
     </div>
   );

@@ -17,7 +17,7 @@ export const Header = ({ className }: HeaderProps) => {
   const { t } = useTranslation();
 
   return (
-    <header className={classNames(cls.Header, {}, [className])}>
+    <header className={classNames(cls.Header, 'container')}>
       <AppLink to={getRouteMain()}>
         <Icon className={cls.icon} Svg={LogoIcon} />
       </AppLink>

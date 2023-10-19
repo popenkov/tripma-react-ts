@@ -2,13 +2,13 @@ import { FC } from 'react';
 
 import { FooterCopyright } from '../FooterCopyright/FooterCopyright';
 import { FooterSocials } from '../FooterSocials/FooterSocials';
-import cls from '../Footer.module.scss';
+import { HStack } from '@/shared/ui/Stack';
 
 export const FooterBottom: FC = () => {
   return (
-    <div className={cls.bottomContainer}>
+    <HStack justify="between">
       <FooterSocials />
       <FooterCopyright />
-    </div>
+    </HStack>
   );
 };

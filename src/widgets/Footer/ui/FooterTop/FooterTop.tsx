@@ -5,14 +5,15 @@ import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { getRouteMain } from '@/shared/const/router';
 import { Icon } from '@/shared/ui/Icon';
 import { FooterLinks } from '../FooterLinks/FooterLinks';
+import { HStack } from '@/shared/ui/Stack';
 
 export const FooterTop: FC = () => {
   return (
-    <div className={cls.topContainer}>
+    <HStack justify="between">
       <AppLink to={getRouteMain()}>
         <Icon className={cls.icon} Svg={LogoIcon} />
       </AppLink>
       <FooterLinks />
-    </div>
+    </HStack>
   );
 };

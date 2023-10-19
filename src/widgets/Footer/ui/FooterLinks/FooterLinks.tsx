@@ -1,11 +1,13 @@
 import { FC } from 'react';
-import cls from '../Footer.module.scss';
 import { FOOTER_LINKS_DATA } from './links-data';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
+import { HStack } from '@/shared/ui/Stack';
+import { useTranslation } from 'react-i18next';
 
 export const FooterLinks: FC = () => {
+  const { t } = useTranslation();
   return (
-    <div>
+    <HStack align="start" justify="between" gap="20" max>
       {FOOTER_LINKS_DATA.map((section) => {
         const { title, links } = section;
         return (
@@ -13,21 +15,20 @@ export const FooterLinks: FC = () => {
             <h3>{title}</h3>
             <ul>
               {links.map((link) => {
-                const { text, img, href } = link;
+                const { text, Image, href } = link;
 
-                if (img) {
+                if (Image) {
                   return (
                     <li>
                       <a href={href}>
-                        <img src={img} alt={text} />
+                        <Image />
                       </a>
                     </li>
                   );
                 }
-
                 return (
                   <li key={href}>
-                    <AppLink to={href}> {text} </AppLink>
+                    <AppLink to={href}> {t(text)} </AppLink>
                   </li>
                 );
               })}
@@ -35,6 +36,6 @@ export const FooterLinks: FC = () => {
           </div>
         );
       })}
-    </div>
+    </HStack>
   );
 };

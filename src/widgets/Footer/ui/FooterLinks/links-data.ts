@@ -1,3 +1,6 @@
+import AppStoreImg from '@/shared/assets/images/logos/app-store.svg';
+import GooglePlayImg from '@/shared/assets/images/logos/google-play.svg';
+
 export const FOOTER_LINKS_DATA = [
   {
     title: 'About',
@@ -103,12 +106,12 @@ export const FOOTER_LINKS_DATA = [
       },
       {
         text: 'app-store',
-        img: '@/shared/assets/images/logos/app-store.svg',
+        Image: AppStoreImg,
         href: '/',
       },
       {
         text: 'google-play',
-        img: '@/shared/assets/images/logos/google-play.svg',
+        Image: GooglePlayImg,
         href: '/',
       },
     ],

@@ -1,3 +1,38 @@
 {
-  "places": {}
+  "places": {},
+  "reviews": [
+    {
+      "id": "review-1",
+      "author": {
+        "avatar": "/src/shared/assets/images/content/review-avatar-1.jpg",
+        "name": "Yifei Chen",
+        "city": "Seoul, South Korea",
+        "date": "April 2019"
+      },
+      "rating": 5,
+      "text": "What a great experience using Tripma! I booked all of my flights for my gap year through Tripma and never had any issues. When I had to cancel a flight because of an emergency, Tripma support helped me"
+    },
+    {
+      "id": "review-2",
+      "author": {
+        "avatar": "/src/shared/assets/images/content/review-avatar-2.jpg",
+        "name": "Kaori Yamaguchi",
+        "city": "Honolulu, Hawaii",
+        "date": "February 2017"
+      },
+      "rating": 4,
+      "text": "My family and I visit Hawaii every year, and we usually book our flights using other services. Tripma was recommened to us by a long time friend, and I’m so glad we tried it out! The process was easy and"
+    },
+    {
+      "id": "review-3",
+      "author": {
+        "avatar": "/src/shared/assets/images/content/review-avatar-3.jpg",
+        "name": "Anthony Lewis",
+        "city": "Berlin, Germany",
+        "date": "April 2019"
+      },
+      "rating": 5,
+      "text": "When I was looking to book my flight to Berlin from LAX, Tripma had the best browsing experiece so I figured I’d give it a try. It was my first time using Tripma, but I’d definitely recommend it to a friend and use it for"
+    }
+  ]
 }

@@ -1,13 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { ReviewType } from '../../types/type';
-import { SyntheticEvent } from 'react';
 
 export const fetchReviewsData = createAsyncThunk<
   ReviewType[],
   any,
   ThunkConfig<string>
->('reviews/fetchReviewsData', async (_: SyntheticEvent | void, thunkApi) => {
+>('reviews/fetchReviewsData', async (_, thunkApi) => {
   const { extra, rejectWithValue } = thunkApi;
 
   try {

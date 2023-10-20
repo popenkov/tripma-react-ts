@@ -8,6 +8,16 @@ import {
 } from '../../model/selectors/getReviewsData';
 import { useSelector } from 'react-redux';
 import { Skeleton } from '@/shared/ui/Skeleton';
+import { reviewsReducer } from '../../model/slice/reviewsSlice';
+import {
+  DynamicModuleLoader,
+  ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { ReviewList } from '../ReviewList/ReviewList';
+
+const reducers: ReducersList = {
+  reviews: reviewsReducer,
+};
 
 export const Reviews: FC = () => {
   const dispatch = useAppDispatch();
@@ -15,12 +25,11 @@ export const Reviews: FC = () => {
   const isLoading = useSelector(getReviewsAreLoading);
   const error = useSelector(getReviewsError);
 
-  useEffect(async () => {
-    const result = await dispatch(fetchReviewsData('_'));
-    console.log('result', result);
+  useEffect(() => {
+    dispatch(fetchReviewsData('_'));
+    console.log('reviewsData', reviewsData);
   }, [dispatch]);
 
-  console.log('reviewsData', reviewsData);
   let content;
   if (isLoading) {
     content = (
@@ -36,8 +45,12 @@ export const Reviews: FC = () => {
   } else if (error) {
     content = <h1>ошибка</h1>;
   } else {
-    content = <h1>reviewContent</h1>;
+    content = <ReviewList data={reviewsData} />;
   }
 
-  return <div>{content}</div>;
+  return (
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
+      <div>{content}</div>
+    </DynamicModuleLoader>
+  );
 };
